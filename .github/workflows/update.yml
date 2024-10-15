@@ -347,119 +347,119 @@ jobs:
         env:
           GITHUB_WORKSPACE: ${{ github.workspace }}
 
-  build_x64_no_root_gapps_remove_amazon_redfin:
-    name: Build for x64 as Redfin with No Root, GApps and No Amazon Appstore
-    permissions: write-all
-    needs: [check, check-and-create-tag, update-downloadlinks]
-    uses: ./.github/workflows/build.yml
-    with:
-      arch: x64
-      root: none
-      gapps: --install-gapps
-      amazonflag: --remove-amazon
-      magiskver: stable
-      devicemodel: redfin
-      compressformat: zip
-      wsa_ver: ${{ inputs.wsa_ver }}
-    secrets: inherit
+  # build_x64_no_root_gapps_remove_amazon_redfin:
+  #   name: Build for x64 as Redfin with No Root, GApps and No Amazon Appstore
+  #   permissions: write-all
+  #   needs: [check, check-and-create-tag, update-downloadlinks]
+  #   uses: ./.github/workflows/build.yml
+  #   with:
+  #     arch: x64
+  #     root: none
+  #     gapps: --install-gapps
+  #     amazonflag: --remove-amazon
+  #     magiskver: stable
+  #     devicemodel: redfin
+  #     compressformat: zip
+  #     wsa_ver: ${{ inputs.wsa_ver }}
+  #   secrets: inherit
 
-  build_x64_no_root_gapps_redfin:
-    name: Build for x64 as Redfin with No Root, GApps
-    permissions: write-all
-    needs: [check, check-and-create-tag, update-downloadlinks]
-    uses: ./.github/workflows/build.yml
-    with:
-      arch: x64
-      root: none
-      gapps: --install-gapps
-      amazonflag: ""
-      magiskver: stable
-      devicemodel: redfin
-      compressformat: zip
-      wsa_ver: ${{ inputs.wsa_ver }}
-    secrets: inherit
+  # build_x64_no_root_gapps_redfin:
+  #   name: Build for x64 as Redfin with No Root, GApps
+  #   permissions: write-all
+  #   needs: [check, check-and-create-tag, update-downloadlinks]
+  #   uses: ./.github/workflows/build.yml
+  #   with:
+  #     arch: x64
+  #     root: none
+  #     gapps: --install-gapps
+  #     amazonflag: ""
+  #     magiskver: stable
+  #     devicemodel: redfin
+  #     compressformat: zip
+  #     wsa_ver: ${{ inputs.wsa_ver }}
+  #   secrets: inherit
 
-  build_x64_no_root_no_gapps_remove_amazon_redfin:
-    name: Build for x64 as Redfin with No Root, No GApps and No Amazon Appstore
-    permissions: write-all
-    needs: [check, check-and-create-tag, update-downloadlinks]
-    uses: ./.github/workflows/build.yml
-    with:
-      arch: x64
-      root: none
-      gapps: ""
-      amazonflag: --remove-amazon
-      magiskver: stable
-      devicemodel: redfin
-      compressformat: zip
-      wsa_ver: ${{ inputs.wsa_ver }}
-    secrets: inherit
+  # build_x64_no_root_no_gapps_remove_amazon_redfin:
+  #   name: Build for x64 as Redfin with No Root, No GApps and No Amazon Appstore
+  #   permissions: write-all
+  #   needs: [check, check-and-create-tag, update-downloadlinks]
+  #   uses: ./.github/workflows/build.yml
+  #   with:
+  #     arch: x64
+  #     root: none
+  #     gapps: ""
+  #     amazonflag: --remove-amazon
+  #     magiskver: stable
+  #     devicemodel: redfin
+  #     compressformat: zip
+  #     wsa_ver: ${{ inputs.wsa_ver }}
+  #   secrets: inherit
 
-  build_x64_no_root_no_gapps_redfin:
-    name: Build for x64 as Redfin with No Root, No GApps
-    permissions: write-all
-    needs: [check, check-and-create-tag, update-downloadlinks]
-    uses: ./.github/workflows/build.yml
-    with:
-      arch: x64
-      root: none
-      gapps: ""
-      amazonflag: ""
-      magiskver: stable
-      devicemodel: redfin
-      compressformat: zip
-      wsa_ver: ${{ inputs.wsa_ver }}
-    secrets: inherit
+  # build_x64_no_root_no_gapps_redfin:
+  #   name: Build for x64 as Redfin with No Root, No GApps
+  #   permissions: write-all
+  #   needs: [check, check-and-create-tag, update-downloadlinks]
+  #   uses: ./.github/workflows/build.yml
+  #   with:
+  #     arch: x64
+  #     root: none
+  #     gapps: ""
+  #     amazonflag: ""
+  #     magiskver: stable
+  #     devicemodel: redfin
+  #     compressformat: zip
+  #     wsa_ver: ${{ inputs.wsa_ver }}
+  #   secrets: inherit
 
-  build_x64_kernelsu_gapps_remove_amazon_redfin:
-    name: Build for x64 as Redfin with KernelSU, GApps and No Amazon Appstore
-    permissions: write-all
-    needs: [check, check-and-create-tag, update-downloadlinks]
-    uses: ./.github/workflows/build_old.yml
-    with:
-      arch: x64
-      root: kernelsu
-      gapps: MindTheGapps
-      amazonflag: --remove-amazon
-      magiskver: stable
-      devicemodel: redfin
-      compressformat: zip
-      wsa_ver: ${{ inputs.wsa_ver }}
-    secrets: inherit
+  # build_x64_kernelsu_gapps_remove_amazon_redfin:
+  #   name: Build for x64 as Redfin with KernelSU, GApps and No Amazon Appstore
+  #   permissions: write-all
+  #   needs: [check, check-and-create-tag, update-downloadlinks]
+  #   uses: ./.github/workflows/build_old.yml
+  #   with:
+  #     arch: x64
+  #     root: kernelsu
+  #     gapps: MindTheGapps
+  #     amazonflag: --remove-amazon
+  #     magiskver: stable
+  #     devicemodel: redfin
+  #     compressformat: zip
+  #     wsa_ver: ${{ inputs.wsa_ver }}
+  #   secrets: inherit
 
-  build_x64_magisk_gapps_redfin:
-    name: Build for x64 as Redfin with Magisk, GApps
-    permissions: write-all
-    needs: [check, check-and-create-tag, update-downloadlinks]
-    uses: ./.github/workflows/build.yml
-    with:
-      arch: x64
-      root: magisk
-      gapps: --install-gapps
-      amazonflag: ""
-      magiskver: stable
-      devicemodel: redfin
-      compressformat: zip
-      wsa_ver: ${{ inputs.wsa_ver }}
-    secrets: inherit
+  # build_x64_magisk_gapps_redfin:
+  #   name: Build for x64 as Redfin with Magisk, GApps
+  #   permissions: write-all
+  #   needs: [check, check-and-create-tag, update-downloadlinks]
+  #   uses: ./.github/workflows/build.yml
+  #   with:
+  #     arch: x64
+  #     root: magisk
+  #     gapps: --install-gapps
+  #     amazonflag: ""
+  #     magiskver: stable
+  #     devicemodel: redfin
+  #     compressformat: zip
+  #     wsa_ver: ${{ inputs.wsa_ver }}
+  #   secrets: inherit
 
-  build_x64_magisk_no_gapps_remove_amazon_redfin:
-    name: Build for x64 as Redfin with Magisk, No GApps and No Amazon Appstore
-    permissions: write-all
-    needs: [check, check-and-create-tag, update-downloadlinks]
-    uses: ./.github/workflows/build.yml
-    with:
-      arch: x64
-      root: magisk
-      gapps: ""
-      amazonflag: --remove-amazon
-      magiskver: stable
-      devicemodel: redfin
-      compressformat: zip
-      wsa_ver: ${{ inputs.wsa_ver }}
-    secrets: inherit
+  # build_x64_magisk_no_gapps_remove_amazon_redfin:
+  #   name: Build for x64 as Redfin with Magisk, No GApps and No Amazon Appstore
+  #   permissions: write-all
+  #   needs: [check, check-and-create-tag, update-downloadlinks]
+  #   uses: ./.github/workflows/build.yml
+  #   with:
+  #     arch: x64
+  #     root: magisk
+  #     gapps: ""
+  #     amazonflag: --remove-amazon
+  #     magiskver: stable
+  #     devicemodel: redfin
+  #     compressformat: zip
+  #     wsa_ver: ${{ inputs.wsa_ver }}
+  #   secrets: inherit
 
-  build_x64_magisk_canary_gapps_remove_amazon_redfin:
+  build_x64_magisk_gapps_remove_amazon_redfin:
     name: Build for x64 as Redfin with Magisk Canary, GApps and No Amazon Appstore
     permissions: write-all
     needs: [check, check-and-create-tag, update-downloadlinks]
@@ -469,139 +469,139 @@ jobs:
       root: magisk
       gapps: --install-gapps
       amazonflag: --remove-amazon
-      magiskver: canary
-      devicemodel: redfin
-      compressformat: zip
-      wsa_ver: ${{ inputs.wsa_ver }}
-    secrets: inherit
-
-  build_arm64_no_root_gapps_remove_amazon_redfin:
-    name: Build for arm64 as Redfin with No Root, GApps and No Amazon Appstore
-    permissions: write-all
-    needs: [check, check-and-create-tag, update-downloadlinks]
-    uses: ./.github/workflows/buildarm64.yml
-    with:
-      arch: arm64
-      root: none
-      gapps: --install-gapps
-      amazonflag: --remove-amazon
       magiskver: stable
       devicemodel: redfin
       compressformat: zip
       wsa_ver: ${{ inputs.wsa_ver }}
     secrets: inherit
 
-  build_arm64_no_root_gapps_redfin:
-    name: Build for arm64 as Redfin with No Root, GApps
-    permissions: write-all
-    needs: [check, check-and-create-tag, update-downloadlinks]
-    uses: ./.github/workflows/buildarm64.yml
-    with:
-      arch: arm64
-      root: none
-      gapps: --install-gapps
-      amazonflag: ""
-      magiskver: stable
-      devicemodel: redfin
-      compressformat: zip
-      wsa_ver: ${{ inputs.wsa_ver }}
-    secrets: inherit
+  # build_arm64_no_root_gapps_remove_amazon_redfin:
+  #   name: Build for arm64 as Redfin with No Root, GApps and No Amazon Appstore
+  #   permissions: write-all
+  #   needs: [check, check-and-create-tag, update-downloadlinks]
+  #   uses: ./.github/workflows/buildarm64.yml
+  #   with:
+  #     arch: arm64
+  #     root: none
+  #     gapps: --install-gapps
+  #     amazonflag: --remove-amazon
+  #     magiskver: stable
+  #     devicemodel: redfin
+  #     compressformat: zip
+  #     wsa_ver: ${{ inputs.wsa_ver }}
+  #   secrets: inherit
 
-  build_arm64_no_root_no_gapps_remove_amazon_redfin:
-    name: Build for arm64 as Redfin with No Root, No GApps and No Amazon Appstore
-    permissions: write-all
-    needs: [check, check-and-create-tag, update-downloadlinks]
-    uses: ./.github/workflows/buildarm64.yml
-    with:
-      arch: arm64
-      root: none
-      gapps: ""
-      amazonflag: --remove-amazon
-      magiskver: stable
-      devicemodel: redfin
-      compressformat: zip
-      wsa_ver: ${{ inputs.wsa_ver }}
-    secrets: inherit
+  # build_arm64_no_root_gapps_redfin:
+  #   name: Build for arm64 as Redfin with No Root, GApps
+  #   permissions: write-all
+  #   needs: [check, check-and-create-tag, update-downloadlinks]
+  #   uses: ./.github/workflows/buildarm64.yml
+  #   with:
+  #     arch: arm64
+  #     root: none
+  #     gapps: --install-gapps
+  #     amazonflag: ""
+  #     magiskver: stable
+  #     devicemodel: redfin
+  #     compressformat: zip
+  #     wsa_ver: ${{ inputs.wsa_ver }}
+  #   secrets: inherit
 
-  build_arm64_no_root_no_gapps_redfin:
-    name: Build for arm64 as Redfin with No Root, No GApps
-    permissions: write-all
-    needs: [check, check-and-create-tag, update-downloadlinks]
-    uses: ./.github/workflows/buildarm64.yml
-    with:
-      arch: arm64
-      root: none
-      gapps: ""
-      amazonflag: ""
-      magiskver: stable
-      devicemodel: redfin
-      compressformat: zip
-      wsa_ver: ${{ inputs.wsa_ver }}
-    secrets: inherit
+  # build_arm64_no_root_no_gapps_remove_amazon_redfin:
+  #   name: Build for arm64 as Redfin with No Root, No GApps and No Amazon Appstore
+  #   permissions: write-all
+  #   needs: [check, check-and-create-tag, update-downloadlinks]
+  #   uses: ./.github/workflows/buildarm64.yml
+  #   with:
+  #     arch: arm64
+  #     root: none
+  #     gapps: ""
+  #     amazonflag: --remove-amazon
+  #     magiskver: stable
+  #     devicemodel: redfin
+  #     compressformat: zip
+  #     wsa_ver: ${{ inputs.wsa_ver }}
+  #   secrets: inherit
 
-  build_arm64_kernelsu_gapps_remove_amazon_redfin:
-    name: Build for arm64 as Redfin with KernelSU, GApps and No Amazon Appstore
-    permissions: write-all
-    needs: [check, check-and-create-tag, update-downloadlinks]
-    uses: ./.github/workflows/build_arm64_old.yml
-    with:
-      arch: arm64
-      root: kernelsu
-      gapps: MindTheGapps
-      amazonflag: --remove-amazon
-      magiskver: stable
-      devicemodel: redfin
-      compressformat: zip
-      wsa_ver: ${{ inputs.wsa_ver }}
-    secrets: inherit
+  # build_arm64_no_root_no_gapps_redfin:
+  #   name: Build for arm64 as Redfin with No Root, No GApps
+  #   permissions: write-all
+  #   needs: [check, check-and-create-tag, update-downloadlinks]
+  #   uses: ./.github/workflows/buildarm64.yml
+  #   with:
+  #     arch: arm64
+  #     root: none
+  #     gapps: ""
+  #     amazonflag: ""
+  #     magiskver: stable
+  #     devicemodel: redfin
+  #     compressformat: zip
+  #     wsa_ver: ${{ inputs.wsa_ver }}
+  #   secrets: inherit
 
-  build_arm64_magisk_gapps_redfin:
-    name: Build for arm64 as Redfin with Magisk, GApps
-    permissions: write-all
-    needs: [check, check-and-create-tag, update-downloadlinks]
-    uses: ./.github/workflows/buildarm64.yml
-    with:
-      arch: arm64
-      root: magisk
-      gapps: --install-gapps
-      amazonflag: ""
-      magiskver: stable
-      devicemodel: redfin
-      compressformat: zip
-      wsa_ver: ${{ inputs.wsa_ver }}
-    secrets: inherit
+  # build_arm64_kernelsu_gapps_remove_amazon_redfin:
+  #   name: Build for arm64 as Redfin with KernelSU, GApps and No Amazon Appstore
+  #   permissions: write-all
+  #   needs: [check, check-and-create-tag, update-downloadlinks]
+  #   uses: ./.github/workflows/build_arm64_old.yml
+  #   with:
+  #     arch: arm64
+  #     root: kernelsu
+  #     gapps: MindTheGapps
+  #     amazonflag: --remove-amazon
+  #     magiskver: stable
+  #     devicemodel: redfin
+  #     compressformat: zip
+  #     wsa_ver: ${{ inputs.wsa_ver }}
+  #   secrets: inherit
 
-  build_arm64_magisk_no_gapps_remove_amazon_redfin:
-    name: Build for arm64 as Redfin with Magisk, No GApps and No Amazon Appstore
-    permissions: write-all
-    needs: [check, check-and-create-tag, update-downloadlinks]
-    uses: ./.github/workflows/buildarm64.yml
-    with:
-      arch: arm64
-      root: magisk
-      gapps: ""
-      amazonflag: --remove-amazon
-      magiskver: stable
-      devicemodel: redfin
-      compressformat: zip
-      wsa_ver: ${{ inputs.wsa_ver }}
-    secrets: inherit
+  # build_arm64_magisk_gapps_redfin:
+  #   name: Build for arm64 as Redfin with Magisk, GApps
+  #   permissions: write-all
+  #   needs: [check, check-and-create-tag, update-downloadlinks]
+  #   uses: ./.github/workflows/buildarm64.yml
+  #   with:
+  #     arch: arm64
+  #     root: magisk
+  #     gapps: --install-gapps
+  #     amazonflag: ""
+  #     magiskver: stable
+  #     devicemodel: redfin
+  #     compressformat: zip
+  #     wsa_ver: ${{ inputs.wsa_ver }}
+  #   secrets: inherit
 
-  build_arm64_magisk_canary_gapps_remove_amazon_redfin:
-    name: Build for arm64 as Redfin with Magisk Canary, GApps and No Amazon Appstore
-    permissions: write-all
-    needs: [check, check-and-create-tag, update-downloadlinks]
-    uses: ./.github/workflows/buildarm64.yml
-    with:
-      arch: arm64
-      root: magisk
-      gapps: --install-gapps
-      amazonflag: --remove-amazon
-      magiskver: canary
-      devicemodel: redfin
-      compressformat: zip
-      wsa_ver: ${{ inputs.wsa_ver }}
-    secrets: inherit 
+  # build_arm64_magisk_no_gapps_remove_amazon_redfin:
+  #   name: Build for arm64 as Redfin with Magisk, No GApps and No Amazon Appstore
+  #   permissions: write-all
+  #   needs: [check, check-and-create-tag, update-downloadlinks]
+  #   uses: ./.github/workflows/buildarm64.yml
+  #   with:
+  #     arch: arm64
+  #     root: magisk
+  #     gapps: ""
+  #     amazonflag: --remove-amazon
+  #     magiskver: stable
+  #     devicemodel: redfin
+  #     compressformat: zip
+  #     wsa_ver: ${{ inputs.wsa_ver }}
+  #   secrets: inherit
+
+  # build_arm64_magisk_canary_gapps_remove_amazon_redfin:
+  #   name: Build for arm64 as Redfin with Magisk Canary, GApps and No Amazon Appstore
+  #   permissions: write-all
+  #   needs: [check, check-and-create-tag, update-downloadlinks]
+  #   uses: ./.github/workflows/buildarm64.yml
+  #   with:
+  #     arch: arm64
+  #     root: magisk
+  #     gapps: --install-gapps
+  #     amazonflag: --remove-amazon
+  #     magiskver: canary
+  #     devicemodel: redfin
+  #     compressformat: zip
+  #     wsa_ver: ${{ inputs.wsa_ver }}
+  #   secrets: inherit 
 
 
   
